@@ -4,8 +4,13 @@ $(function() {
   function setRandomQuote() {
     var randomIndex = Math.floor(Math.random() * quotes.length);
     var quote = quotes[randomIndex];
-    var quoteContainer = $("#quote");
-    quoteContainer.text(quote);
+
+    var quoteContainer = $(".quote-container");
+    var quoteDiv = $("#quote");
+
+    quoteContainer.hide();
+    quoteDiv.text(quote);
+    quoteContainer.fadeIn(2500);
   }
 
   $(".next-quote").click(function() {
